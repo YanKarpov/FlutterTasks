@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'login_screen.dart';
 import 'home_screen.dart';
 
 class AuthWrapper extends StatelessWidget {
@@ -15,11 +14,11 @@ class AuthWrapper extends StatelessWidget {
           );
         }
 
-        if (snapshot.hasData) {
-          return HomeScreen();
-        } else {
-          return LoginScreen();
+        if (snapshot.hasData && snapshot.data != null) {
+          return HomeScreen(isGuest: false);
         }
+
+        return HomeScreen(isGuest: true);
       },
     );
   }
