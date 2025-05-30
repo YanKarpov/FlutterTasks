@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'game_screen.dart'; // Импортируем экран с игрой
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,23 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Добро пожаловать, ${user?.email ?? 'пользователь'}!'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('Добро пожаловать, ${user?.email ?? 'пользователь'}!'),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Переход на экран игры
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GameScreen()),
+                );
+              },
+              child: Text('Играть в угадай число'),
+            ),
+          ],
+        ),
       ),
     );
   }
