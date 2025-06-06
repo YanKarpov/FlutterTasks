@@ -1,16 +1,10 @@
-# kt7
+# Meow Meow Meow
 
-A new Flutter project.
+Простое Flutter-приложение, которое показывает случайный факт о котах, используя открытое API [catfact.ninja](https://catfact.ninja/fact).
 
-## Getting Started
+## Основной функционал
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Получение случайного факта о коте
+- Кнопка для загрузки нового факта
+- Работа с API через Dio
+- Чистая архитектура с разделением по слоям: `models`, `services`, `pages`
