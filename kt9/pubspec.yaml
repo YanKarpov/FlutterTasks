@@ -1,0 +1,23 @@
+name: kt9
+description: A Flutter project using Elementary MVVM architecture.
+
+publish_to: "none" 
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  elementary: ^3.2.0
+  state_notifier: ^0.7.0  # или актуальная версия
+  flutter_state_notifier:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
